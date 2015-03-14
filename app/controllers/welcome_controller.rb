@@ -40,6 +40,7 @@ class WelcomeController < ApplicationController
     @digits = 10
 
     @digits = params[:digits].to_i if params[:digits]
+    @digits = 1000 if @digits > 1000
 
     @pi = pi(@digits)
   end
